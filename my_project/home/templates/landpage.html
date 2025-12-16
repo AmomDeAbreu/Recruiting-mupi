@@ -95,10 +95,10 @@
   <section id="contato" class="py-20">
     <div class="max-w-5xl mx-auto px-6">
       <h3 class="text-3xl font-bold mb-8 text-center">Contato</h3>
-      <form class="grid gap-6 md:grid-cols-2">
-        <input type="text" placeholder="Nome" class="bg-dark border border-gray-700 rounded-xl px-4 py-3" />
-        <input type="email" placeholder="Email" class="bg-dark border border-gray-700 rounded-xl px-4 py-3" />
-        <textarea placeholder="Mensagem" rows="4" class="md:col-span-2 bg-dark border border-gray-700 rounded-xl px-4 py-3"></textarea>
+      <form class="grid gap-6 md:grid-cols-2" action="/home/" method="post"> {% csrf_token %}
+        <input type="text" name="nome" placeholder="Nome" class="bg-dark border border-gray-700 rounded-xl px-4 py-3" />
+        <input type="email" name="email" placeholder="Email" class="bg-dark border border-gray-700 rounded-xl px-4 py-3" />
+        <textarea name="mensagem" placeholder="Mensagem" rows="4" class="md:col-span-2 bg-dark border border-gray-700 rounded-xl px-4 py-3"></textarea>
         <button class="md:col-span-2 bg-accent hover:bg-violet-700 transition px-6 py-3 rounded-xl font-semibold">
            <input type="submit" value="Enviar" />
         </button>
