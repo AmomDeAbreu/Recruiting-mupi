@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crazy Comments</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dark: '#0f172a',
+            darker: '#020617',
+            accent: '#7c3aed'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-darker text-gray-200 font-sans">
+
+  <!-- Header / Navbar -->
+  <header class="bg-dark shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <h1 class="text-2xl font-bold text-accent">Crazy Comments</h1>
+      <nav class="space-x-6 hidden md:block">
+        <a href="/home" class="hover:text-accent transition">Início</a>
+        <a href="#destaques" class="hover:text-accent transition">Destaques</a>
+        <a href="#comentarios" class="hover:text-accent transition">Comentários</a>
+        <a href="#contato" class="hover:text-accent transition">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+
+
+<!-- Login Page -->
+<section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-darker to-dark px-6">
+  <div class="w-full max-w-md bg-dark rounded-3xl shadow-2xl p-8">
+    <div class="text-center mb-8">
+      <h2 class="text-3xl font-extrabold text-accent">Bem-vindo de volta</h2>
+      <p class="text-gray-400 mt-2">Acesse a área de administração de mensagens.</p>
+    </div>
+
+    <form class="space-y-6">
+      <div>
+        <label class="block text-sm mb-1">Email</label>
+        <input type="email" placeholder="seu@email.com" class="w-full bg-darker border border-gray-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent" />
+      </div>
+
+      <div>
+        <label class="block text-sm mb-1">Senha</label>
+        <input type="password" placeholder="••••••••" class="w-full bg-darker border border-gray-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent" />
+      </div>
+
+      <div class="flex items-center justify-between text-sm">
+        <label class="flex items-center gap-2">
+          <input type="checkbox" class="accent-violet-600" />
+          <span class="text-gray-400">Lembrar-me</span>
+        </label>
+        <a href="#" class="text-accent hover:underline">Esqueceu a senha?</a>
+      </div>
+
+      <button type="submit" class="w-full bg-accent hover:bg-violet-700 active:scale-95 transition transform px-6 py-3 rounded-xl font-semibold shadow-lg">
+        Entrar
+      </button>
+    </form>
+
+    <div class="mt-8 text-center text-sm text-gray-400">
+      <p>Não tem uma conta?</p>
+      <a href="#" class="text-accent hover:underline font-semibold">Criar conta</a>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
