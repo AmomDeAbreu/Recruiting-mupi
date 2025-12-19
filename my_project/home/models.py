@@ -9,4 +9,4 @@ class Usuario(models.Model):
 class Administrador(models.Model):
     email = models.EmailField(unique=True)
     senha = models.CharField(max_length=128)
-    senha = models.CharField(max_length=100)
+    criado_em = models.DateTimeField(auto_now_add=True)

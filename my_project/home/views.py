@@ -1,16 +1,22 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Usuario
+from .models import Usuario, Administrador
 from django.shortcuts import render
+
+def messages_view(request):
+    mensagens = Administrador.objects.all().order_by("-criado_em")
+    return render(request, 'messages_list.html', {
+        "mensagens": mensagens
+    })
 
 def login_view(request):
     if request.method == "POST":
         # Process the form data
-        nome = request.POST.get("nome")
+        email = request.POST.get("email")
         senha = request.POST.get("senha")
-        user = Usuario.objects.filter(nome=nome, senha=senha)
-        if user.exists():
-            return HttpResponse("Login successful for " + nome + "!")
+        admin = Administrador.objects.filter(email=email, senha=senha)
+        if admin.exists():
+            return render(request, 'messages_list.html')
         else:
             return HttpResponse("Invalid username or password!")
     else:
