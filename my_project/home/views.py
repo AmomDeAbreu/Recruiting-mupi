@@ -40,4 +40,6 @@ def home(request):
     else:
         return render(request, 'landpage.html')
 
+
+
 # Create your views here.
